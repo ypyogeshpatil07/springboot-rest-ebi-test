@@ -1,26 +1,22 @@
 #### Technologies / Frameworks Used
-* Spring Boot 2.0.4
+    * Spring Boot 2.1.0.RELEASE
     * Spring Web MVC
     * Spring Security (with simple in-memory authentication)
     * HTTP Basic Authentication
-    * Spring asynchronous events for in-process pub-sub mechanism
     * Spring Data JPA
     * Hibernate
-* JSR-303 Bean Validation
-* PostgreSQL 
-* Lombok
-* MapStruct
-* Swagger2
-* JUnit 5
-* H2 (integration test)
+    * H2 (In memory database) 
+    * Swagger2
+    * JUnit 5
+
 
 #### Pre-requisites
 * JDK 8 
 * Maven 3.3 and above
-* Docker with docker-compose
+* Docker Toolbox For windows/mac
 
 #### Build
-Clone the git repo to your local using `git clone https://bitbucket.org/koneru9999/embl-ebi-code-test.git`.
+Clone the git repo to your local using `git clone https://github.com/ypyogeshpatil07/springboot-rest-ebi-test.git`.
 
 Navigate to root folder of the cloned repo using cmd (windows) or terminal (MacOS) and issue `mvn clean install`.
 
@@ -30,7 +26,7 @@ This command will compile, test, and package a spring boot uber jar (with all de
 #### Running the application
 First build the application (refer to above section). Once the application has successfully built, 
 
-* Start the PostgreSQL using `docker-compose up -d db`
+* Open Docker Quickstart Terminal and type command `docker-compose up -d db`
 * Once the database container is up and running, Start the application container using `docker-compose up person-service`
 
 
