@@ -22,7 +22,6 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
-import com.ebi.springboot.SpringbootEbiCodeTestApplication;
 import com.ebi.springboot.model.Person;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -87,10 +86,10 @@ public class SpringbootEbiCodeIntegrationTest {
 		String uri = "/person/store-person";
 		Person person = new Person();
 		person.setId(1);
-		person.setFirst_name("yogesh");
-		person.setLast_name("patil");
+		person.setFirstName("yogesh");
+		person.setLastName("patil");
 		person.setAge("23");
-		person.setFavourite_colour("red");
+		person.setFavouriteColour("red");
 		String inputJson = mapToJson(person);
 		MvcResult mvcResult = mvc.perform(
 				MockMvcRequestBuilders.post(uri).contentType(MediaType.APPLICATION_JSON_VALUE).content(inputJson))
@@ -110,15 +109,6 @@ public class SpringbootEbiCodeIntegrationTest {
 		assertEquals(200, status);
 	}
 	
-	
-	 private String getPersonInJson() {
-	        return new StringBuilder("{")
-	                .append("\"first_name\": \"Venkaiah\", ")
-	                .append("\"last_name\": \"Koneru\", ")
-	                .append("\"age\": \"35\", ")
-	                .append("\"favourite_colour\": \"blue\"")
-	                .append("}")
-	                .toString();
-	    }
+
 
 }

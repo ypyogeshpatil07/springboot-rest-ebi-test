@@ -1,6 +1,8 @@
 package com.ebi.springboot.controller;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,7 +17,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ebi.springboot.exception.InvalidRequestException;
 import com.ebi.springboot.model.Person;
+import com.ebi.springboot.model.PersonList;
 import com.ebi.springboot.service.PersonService;
 
 
@@ -49,8 +53,14 @@ public class PersonController {
 	 */
 	@PreAuthorize("hasAuthority('READ_PRIVILEGES')")
 	@GetMapping("/person-all")
-	public ResponseEntity<List<Person>> getAllPerson(){
-		return ResponseEntity.ok().body(personService.getAllPerson());
+	public PersonList getAllPerson(){
+		List<Person> personList = personService.getAllPerson();
+
+        if (Objects.nonNull(personList)) {
+            return new PersonList(personList);
+        }
+
+        return new PersonList(new ArrayList<>());
 	}
 	/**
 	 * REST endpoint for getting person by id
@@ -67,10 +77,11 @@ public class PersonController {
 	 * REST endpoint for storing person
 	 * @param person
 	 * @return
+	 * @throws InvalidRequestException 
 	 */
 	@PreAuthorize("hasAuthority('WRITE_PRIVILEGES')")
 	@PostMapping("/store-person")
-	public ResponseEntity<Person> createPerson(@RequestBody Person person){
+	public ResponseEntity<Person> createPerson(@RequestBody Person person) throws InvalidRequestException{
 		return ResponseEntity.ok().body(this.personService.storePerson(person));
 	}
 	
@@ -79,10 +90,11 @@ public class PersonController {
 	 * @param id
 	 * @param person
 	 * @return
+	 * @throws InvalidRequestException 
 	 */
 	@PreAuthorize("hasAuthority('WRITE_PRIVILEGES')")
 	@PutMapping("/update-person/{id}")
-	public ResponseEntity<Person> updatePerson(@PathVariable long id, @RequestBody Person person){
+	public ResponseEntity<Person> updatePerson(@PathVariable long id, @RequestBody Person person) throws InvalidRequestException{
 		person.setId(id);
 		return ResponseEntity.ok().body(this.personService.updatePerson(person));
 	}
