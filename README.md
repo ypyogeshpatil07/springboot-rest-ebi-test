@@ -53,7 +53,7 @@ Authorities required for REST services:
 | **GET** /person-by-id/{id}    | READ_PRIVILEGES           |
 | **DELETE** /delete-person/{id}| WRITE_PRIVILEGES          |
 
-> NOTE: Please clear your browser cookies before using swagger-ui otherwise 
-> Swagger will use previous authentication details for subsequent calls.
+> NOTE: Please clear your browser cookies before using for any request and swagger-ui also otherwise 
+> pop up for authentication may not come and also Swagger may use previous authentication details for subsequent calls.
 
 Alternatively, Any REST client can be used without depending on Swagger UI.
