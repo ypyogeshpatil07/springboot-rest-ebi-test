@@ -26,12 +26,13 @@ This command will compile, test, and package a spring boot uber jar (with all de
 #### Running the application
 First build the application (refer to above section). Once the application has successfully built, 
 
-* Open Docker Quickstart Terminal and type command `docker-compose up -d db`
-* Once the database container is up and running, Start the application container using `docker-compose up person-service`
+* Open Docker Quickstart Terminal and Go to project root folder ,type command `docker build -t springboot-rest-ebi-test.jar`
+* Check docker image with a command 'docker image ls'
+* Run a docker image `docker run -p 9090:8080 springboot-rest-ebi-test.jar`
 
 
 #### REST Services
-Swagger can be accessed using [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+Swagger can be accessed using [http://localhost:8082/swagger-ui.html](http://localhost:8082/swagger-ui.html)
 
 A simple Authentication has been enabled with the following list of users.
 
@@ -44,15 +45,15 @@ A simple Authentication has been enabled with the following list of users.
 
 Authorities required for REST services:
 
-| REST Service              |   Authorities required    |
-|:--------------------------|:-------------------------:|
-| **PUT** /person           | WRITE_PRIVILEGES          |
-| **GET** /person           | READ_PRIVILEGES           |
-| **POST** /person          | WRITE_PRIVILEGES          |
-| **GET** /person/{id}      | READ_PRIVILEGES           |
-| **DELETE** /person/{id}   | WRITE_PRIVILEGES          |
+| REST Service                  |   Authorities required    |
+|:--------------------------    |:-------------------------:|
+| **PUT** /update-person/{id}   | WRITE_PRIVILEGES          |
+| **GET** /person-all           | READ_PRIVILEGES           |
+| **POST** /store-person        | WRITE_PRIVILEGES          |
+| **GET** /person-by-id/{id}    | READ_PRIVILEGES           |
+| **DELETE** /delete-person/{id}| WRITE_PRIVILEGES          |
 
-> NOTE: Please use browser in a private mode with swagger UI. Otherwise, 
+> NOTE: Please clear your browser cookies before using swagger-ui otherwise 
 > Swagger will use previous authentication details for subsequent calls.
 
 Alternatively, Any REST client can be used without depending on Swagger UI.
