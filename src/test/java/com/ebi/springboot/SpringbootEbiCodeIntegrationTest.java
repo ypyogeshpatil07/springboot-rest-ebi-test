@@ -25,7 +25,11 @@ import org.springframework.web.context.WebApplicationContext;
 import com.ebi.springboot.model.Person;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
+/**
+ * Unit Testcases for a person
+ * @author ypatil7326
+ *
+ */
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK, classes = SpringbootEbiCodeTestApplication.class)
 @AutoConfigureMockMvc

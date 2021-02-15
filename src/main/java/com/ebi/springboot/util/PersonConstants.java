@@ -1,5 +1,10 @@
 package com.ebi.springboot.util;
 
+/**
+ * Constant class for person
+ * @author ypatil7326
+ *
+ */
 public class PersonConstants {
 	
 	private PersonConstants() {
