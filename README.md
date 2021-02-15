@@ -16,7 +16,13 @@
 * Maven 3.3 and above
 * Docker Toolbox For windows/mac
 
-#### Build
+#### How To Run - 2 ways
+* Using Docker Toolbox for windows
+* Simply By Running spring boot jar on respective machine
+
+#### 1.Docker Toolbox Way
+
+#### 1.a Build
 Clone the git repo to your local using `git clone https://github.com/ypyogeshpatil07/springboot-rest-ebi-test.git`.
 
 Navigate to root folder of the cloned repo using cmd (windows) or terminal (MacOS) and issue `mvn clean install`.
@@ -24,7 +30,7 @@ Navigate to root folder of the cloned repo using cmd (windows) or terminal (MacO
 This command will compile, test, and package a spring boot uber jar (with all dependencies).
 
 
-#### Running the application
+#### 1.b Running the application - 
 First build the application (refer to above section). Once the application has successfully built, 
 
 * Open Docker Quickstart Terminal and Go to project root folder ,type command `docker build -t springboot-rest-ebi-test.jar .`
@@ -32,6 +38,17 @@ First build the application (refer to above section). Once the application has s
 * Run a docker image `docker run -p 9090:8080 springboot-rest-ebi-test.jar`
 * To access application use IP address which is assigned by Docker when we open a tool box instead of localhost 
   like [http://IP_ADDRESS:9090/person/](http://IP_ADDRESS:9090/person/)
+  
+ #### 2. Simple by Running spring boot jar
+ This application will packaged as a JAR 
+
+* Clone the git repo to your local using `git clone https://github.com/ypyogeshpatil07/springboot-rest-ebi-test.git`.
+* Make sure you are using JDK 1.8 and Maven 3.x
+* Navigate to root folder of the cloned repo using cmd (windows) or git bash terminal or terminal (MacOS) and issue `mvn clean install`.
+* Once successfully built, you can run the service by below command:
+```
+        java -jar target/springboot-rest-ebi-test.jar
+* Now ,You can access rest end points or swaager url mentioned below 
 
 #### REST Services
 Swagger can be accessed using [http://localhost:8082/swagger-ui.html](http://localhost:8082/swagger-ui.html)
