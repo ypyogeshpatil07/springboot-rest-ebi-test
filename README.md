@@ -48,6 +48,7 @@ First build the application (refer to above section). Once the application has s
 * Once successfully built, you can run the service by below command:
 ```
         java -jar target/springboot-rest-ebi-test.jar
+```
 * Now ,You can access rest end points or swaager url mentioned below 
 
 #### REST Services
