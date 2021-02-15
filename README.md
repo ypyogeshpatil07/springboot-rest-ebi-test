@@ -45,6 +45,7 @@ A simple Authentication has been enabled with the following list of users.
 |                   |           | WRITE_PRIVILEGES      |
 
 Authorities required for REST services:
+> NOTE: id will be created incrementally from 1 to n..You can cross check your ids in H2(in-memory db) to access GET and update call.
 
 | REST Service                  |   Authorities required    |
 |:--------------------------    |:-------------------------:|
