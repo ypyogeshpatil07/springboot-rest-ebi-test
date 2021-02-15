@@ -2,6 +2,11 @@ package com.ebi.springboot.model;
 
 import java.util.List;
 
+/**
+ * List class for person
+ * @author Yogesh Patil
+ *
+ */
 public class PersonList {
 	
 	private List<Person> person;
