@@ -2,7 +2,7 @@ package com.ebi.springboot.util;
 
 /**
  * Constant class for person
- * @author ypatil7326
+ * @author Yogesh Patil
  *
  */
 public class PersonConstants {

@@ -27,7 +27,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 /**
  * Unit Testcases for a person
- * @author ypatil7326
+ * @author Yogesh Patil
  *
  */
 @ExtendWith(SpringExtension.class)
