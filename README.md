@@ -76,4 +76,4 @@ Authorities required for REST services:
 > NOTE: Please clear your browser cookies before using for any request and swagger-ui also otherwise 
 > pop up for authentication may not come and also Swagger may use previous authentication details for subsequent calls.
 
-Alternatively, Any REST client can be used without depending on Swagger UI.
+Alternatively, Any REST client can be used without depending on Swagger UI with the help of postman or any other app.
