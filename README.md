@@ -23,11 +23,9 @@
 ### 1.Docker Toolbox Way
 
 #### 1.a Build
-Clone the git repo to your local using `git clone https://github.com/ypyogeshpatil07/springboot-rest-ebi-test.git`.
-
-Navigate to root folder of the cloned repo using cmd (windows) or terminal (MacOS) and issue `mvn clean install`.
-
-This command will compile, test, and package a spring boot uber jar (with all dependencies).
+ * Clone the git repo to your local using `git clone https://github.com/ypyogeshpatil07/springboot-rest-ebi-test.git`.
+ * Navigate to root folder of the cloned repo using cmd (windows) or terminal (MacOS) and issue `mvn clean install`.
+ * This command will compile, test, and package a spring boot uber jar (with all dependencies).
 
 
 #### 1.b Running the application - 
