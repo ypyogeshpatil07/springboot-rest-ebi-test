@@ -3,6 +3,7 @@
     * Spring Web MVC
     * Spring Security (with simple in-memory authentication)
     * HTTP Basic Authentication
+    * javax.validation
     * Spring Data JPA
     * Hibernate
     * H2 (In memory database) 
