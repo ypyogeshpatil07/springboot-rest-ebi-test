@@ -20,7 +20,7 @@
 * Using Docker Toolbox for windows
 * Simply By Running spring boot jar on respective machine
 
-#### 1.Docker Toolbox Way
+##### 1.Docker Toolbox Way
 
 #### 1.a Build
 Clone the git repo to your local using `git clone https://github.com/ypyogeshpatil07/springboot-rest-ebi-test.git`.
@@ -39,7 +39,7 @@ First build the application (refer to above section). Once the application has s
 * To access application use IP address which is assigned by Docker when we open a tool box instead of localhost 
   like [http://IP_ADDRESS:9090/person/](http://IP_ADDRESS:9090/person/)
   
- #### 2. Simple by Running spring boot jar
+ ##### 2. Simply by Running spring boot jar
  This application will packaged as a JAR 
 
 * Clone the git repo to your local using `git clone https://github.com/ypyogeshpatil07/springboot-rest-ebi-test.git`.
