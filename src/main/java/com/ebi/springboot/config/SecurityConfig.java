@@ -1,5 +1,13 @@
 package com.ebi.springboot.config;
 
+import static com.ebi.springboot.util.PersonConstants.USER1_NAME;
+import static com.ebi.springboot.util.PersonConstants.USER2_NAME;
+import static com.ebi.springboot.util.PersonConstants.USER_ROLE;
+import static com.ebi.springboot.util.PersonConstants.MANAGER_ROLE;
+import static com.ebi.springboot.util.PersonConstants.READ_PRIVILEGES;
+import static com.ebi.springboot.util.PersonConstants.WRITE_PRIVILEGES;
+import static com.ebi.springboot.util.PersonConstants.PASSWORD;
+import static com.ebi.springboot.util.PersonConstants.MANAGER_USERNAME;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -27,26 +35,26 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
      */
 	@Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        String password = passwordEncoder().encode("password");
+        String password = passwordEncoder().encode(PASSWORD);
 
         auth.inMemoryAuthentication()
-                .withUser("user")
+                .withUser(USER1_NAME)
                 .password(password)
-                .roles("USER")
+                .roles(USER_ROLE)
 
                 .and()
 
-                .withUser("user2")
+                .withUser(USER2_NAME)
                 .password(password)
-                .roles("USER")
-                .authorities("READ_PRIVILEGES")
+                .roles(USER_ROLE)
+                .authorities(READ_PRIVILEGES)
 
                 .and()
 
-                .withUser("manager")
+                .withUser(MANAGER_USERNAME)
                 .password(password)
-                .roles("MANAGER")
-                .authorities("WRITE_PRIVILEGES", "READ_PRIVILEGES");
+                .roles(MANAGER_ROLE)
+                .authorities(WRITE_PRIVILEGES, READ_PRIVILEGES);
     }
 	
 	  /**
