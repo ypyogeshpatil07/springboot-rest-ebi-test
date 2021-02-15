@@ -28,7 +28,7 @@ This command will compile, test, and package a spring boot uber jar (with all de
 First build the application (refer to above section). Once the application has successfully built, 
 
 * Open Docker Quickstart Terminal and Go to project root folder ,type command `docker build -t springboot-rest-ebi-test.jar .`
-* Check docker image with a command 'docker image ls'
+* Check docker image with a command `docker image ls`
 * Run a docker image `docker run -p 9090:8080 springboot-rest-ebi-test.jar`
 
 
