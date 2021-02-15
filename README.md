@@ -30,8 +30,8 @@ First build the application (refer to above section). Once the application has s
 * Open Docker Quickstart Terminal and Go to project root folder ,type command `docker build -t springboot-rest-ebi-test.jar .`
 * Check docker image with a command `docker image ls`
 * Run a docker image `docker run -p 9090:8080 springboot-rest-ebi-test.jar`
-* To access application use IP address which is assigned by Docker when we open a tool box instead of localhost like [http://IP_ADDRESS:9090/person/]
-
+* To access application use IP address which is assigned by Docker when we open a tool box instead of localhost 
+  like [http://IP_ADDRESS:9090/person/](http://IP_ADDRESS:9090/person/)
 
 #### REST Services
 Swagger can be accessed using [http://localhost:8082/swagger-ui.html](http://localhost:8082/swagger-ui.html)
